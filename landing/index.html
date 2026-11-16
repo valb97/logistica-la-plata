@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Plata Logística · Transporte de cargas, autoelevadores y maquinaria</title>
+  <meta name="description" content="Transporte de cargas, autoelevadores, traslado de maquinaria y vehículos, y venta y traslado de contenedores desde La Plata. Flota y equipamiento propios.">
+  <meta name="theme-color" content="#0B2545">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/img/hero-camion-contenedor.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Isotipo LP y flecha (se reutilizan con <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="lp-grad" x1="50" y1="0" x2="108" y2="40" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#0D47A1"/>
+        <stop offset="1" stop-color="#1E7BEA"/>
+      </linearGradient>
+      <symbol id="lp-mark" viewBox="0 0 112 70">
+        <path d="M25 2.5h15L23 46h23l-5 14H2.5z" fill="var(--mark-l, #0B2545)"/>
+        <path d="M60 2.5h34c11 0 16 7.5 14 18.5-2 12-10 20-21 20H46l8-11h30c5 0 8-3 8.5-7.5.5-5-2.5-8-7.5-8H55z" fill="url(#lp-grad)"/>
+        <path d="M46 41h20L37.5 67.5z" fill="#3DA5FF"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 16 16">
+        <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#inicio" class="brand" aria-label="La Plata Logística — inicio">
+        <svg class="brand__mark"><use href="#lp-mark"/></svg>
+        <span class="brand__divider" aria-hidden="true"></span>
+        <span class="brand__text">
+          <span class="brand__name">LA PLATA</span>
+          <span class="brand__sub">LOGÍSTICA</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#flota">Flota</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn--primary btn--arrow header__cta">Solicitar cotización <span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero__frame">
+        <img class="hero__bg" src="assets/img/hero-camion-contenedor.jpg" alt="Camión con semirremolque portacontenedor en ruta">
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <h1 class="hero__title">Movemos lo que tu empresa necesita.</h1>
+          <p class="hero__lead">Transporte de cargas, autoelevadores, traslado de maquinaria y vehículos, y contenedores. Flota propia desde La&nbsp;Plata para empresas, industrias y particulares.</p>
+          <div class="hero__actions">
+            <a href="#contacto" class="btn btn--light btn--arrow">Solicitar cotización <span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+            <a href="#servicios" class="btn btn--outline-light">Ver servicios</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section class="section services" id="servicios">
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+
+        <div class="tabs" role="tablist" aria-label="Servicios">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="svc-1" id="tab-1">Transporte de cargas</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="svc-2" id="tab-2" tabindex="-1">Carga, descarga y autoelevadores</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="svc-3" id="tab-3" tabindex="-1">Maquinaria y equipos</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="svc-4" id="tab-4" tabindex="-1">Traslado de vehículos</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="svc-5" id="tab-5" tabindex="-1">Contenedores</button>
+        </div>
+
+        <article class="panel" role="tabpanel" id="svc-1" aria-labelledby="tab-1" tabindex="0">
+          <div class="panel__media"><img src="assets/img/servicio-cargas.jpg" alt="Utilitario con la marca La Plata Logística (imagen ilustrativa)" loading="lazy"></div>
+          <div class="panel__body">
+            <h3 class="panel__title">Transporte de cargas</h3>
+            <p>Cargas generales e industriales, materiales y mercadería en camiones semirremolque. Coordinamos cada traslado según el tipo de carga y su destino, incluidos traslados programados y operaciones especiales.</p>
+            <dl class="spec"><dt>Equipo</dt><dd>5 camiones semirremolque</dd></dl>
+            <a href="#contacto" class="btn btn--dark" data-service="Transporte de cargas">Solicitar transporte <svg class="btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="panel" role="tabpanel" id="svc-2" aria-labelledby="tab-2" tabindex="0" hidden>
+          <div class="panel__media"><img src="assets/img/servicio-autoelevadores.jpg" alt="Autoelevador moviendo un pallet (imagen ilustrativa)" loading="lazy"></div>
+          <div class="panel__body">
+            <h3 class="panel__title">Carga, descarga y autoelevadores</h3>
+            <p>Autoelevadores de 2,5 y 10 toneladas para carga, descarga y movimiento de materiales en depósitos y plantas industriales.</p>
+            <dl class="spec">
+              <dt>Equipo</dt><dd>3 autoelevadores de 2,5&nbsp;t y 1 de 10&nbsp;t</dd>
+              <dt>Condiciones</dt><dd>Capacidades nominales. El de 10&nbsp;t opera dentro de sus condiciones técnicas de trabajo.</dd>
+            </dl>
+            <a href="#contacto" class="btn btn--dark" data-service="Carga, descarga y autoelevadores">Consultar disponibilidad <svg class="btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="panel" role="tabpanel" id="svc-3" aria-labelledby="tab-3" tabindex="0" hidden>
+          <div class="panel__media"><img src="assets/img/servicio-maquinaria.jpg" alt="Semirremolque cama baja con autoelevadores (imagen ilustrativa)" loading="lazy"></div>
+          <div class="panel__body">
+            <h3 class="panel__title">Movimiento de maquinaria y equipos</h3>
+            <p>Traslado de maquinaria, equipamiento industrial, estructuras y cargas de grandes dimensiones. Antes de cada operación evaluamos peso, dimensiones y condiciones de carga y descarga.</p>
+            <a href="#contacto" class="btn btn--dark" data-service="Movimiento de maquinaria y equipos">Solicitar cotización <svg class="btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="panel" role="tabpanel" id="svc-4" aria-labelledby="tab-4" tabindex="0" hidden>
+          <div class="panel__media"><img src="assets/img/servicio-vehiculos.jpg" alt="Camión plancha con un automóvil (imagen ilustrativa)" loading="lazy"></div>
+          <div class="panel__body">
+            <h3 class="panel__title">Traslado de vehículos</h3>
+            <p>Automóviles y vehículos compatibles con la capacidad de la unidad, para particulares, concesionarias, talleres y empresas.</p>
+            <dl class="spec"><dt>Equipo</dt><dd>1 unidad tipo plancha</dd></dl>
+            <a href="#contacto" class="btn btn--dark" data-service="Traslado de vehículos">Consultar traslado <svg class="btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="panel" role="tabpanel" id="svc-5" aria-labelledby="tab-5" tabindex="0" hidden>
+          <div class="panel__media"><img src="assets/img/servicio-contenedores.jpg" alt="Playa de contenedores marítimos (imagen ilustrativa)" loading="lazy"></div>
+          <div class="panel__body">
+            <h3 class="panel__title">Venta y traslado de contenedores</h3>
+            <p>Venta de contenedores marítimos para uso comercial, industrial o de almacenamiento. También los transportamos y posicionamos según las condiciones de carga y descarga de cada lugar.</p>
+            <a href="#contacto" class="btn btn--dark" data-service="Contenedores marítimos">Consultar por contenedores <svg class="btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Flota ===== -->
+    <section class="section fleet" id="flota" aria-labelledby="fleetTitle">
+      <div class="container fleet__inner">
+        <div class="fleet__intro">
+          <h2 class="section-title" id="fleetTitle">Nuestra flota</h2>
+          <p>Contamos con una flota de vehículos y equipamiento especializado para brindar soluciones integrales de <strong>transporte, carga, descarga y movimiento de maquinaria</strong>, adaptándonos a las necesidades de cada operación.</p>
+        </div>
+
+        <ul class="fleet__list">
+          <li>
+            <h3 class="fleet__name">Camiones semirremolque</h3>
+            <p class="fleet__use">Transporte de cargas generales, mercadería, materiales y equipos industriales.</p>
+          </li>
+          <li>
+            <h3 class="fleet__name">Autoelevadores de 2,5&nbsp;toneladas</h3>
+            <p class="fleet__use">Movimiento, carga y descarga de mercadería, pallets y materiales en depósitos e instalaciones.</p>
+          </li>
+          <li>
+            <h3 class="fleet__name">Autoelevador de 10&nbsp;toneladas</h3>
+            <p class="fleet__use">Manipulación y movimiento de maquinaria, equipos industriales y cargas pesadas.</p>
+          </li>
+          <li>
+            <h3 class="fleet__name">Transporte en plancha</h3>
+            <p class="fleet__use">Traslado de automóviles, utilitarios, maquinaria y equipos industriales mediante unidades con plataforma.</p>
+          </li>
+          <li>
+            <h3 class="fleet__name">Equipamiento para contenedores</h3>
+            <p class="fleet__use">Soluciones para el movimiento, manipulación y traslado de contenedores.</p>
+          </li>
+        </ul>
+
+        <div class="fleet__closing">
+          <p class="fleet__claim">Capacidad y versatilidad para cada operación.</p>
+          <p>Combinamos equipamiento especializado, experiencia y capacidad operativa para ofrecer servicios logísticos seguros, eficientes y adaptados a cada cliente.</p>
+          <a href="#contacto" class="btn btn--light btn--arrow">Consultar disponibilidad <span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Seguimiento (demo) ===== -->
+    <section class="section tracking" id="seguimiento" aria-labelledby="trackingTitle">
+      <div class="container">
+        <div class="tracking__bar">
+          <div class="tracking__intro">
+            <h2 class="tracking__title" id="trackingTitle">Seguimiento de envíos <span class="badge">Demo</span></h2>
+            <p>Funcionalidad propuesta: un link por envío para ver en el mapa la ubicación GPS de la unidad, sin instalar nada. Los datos de esta demostración son simulados.</p>
+          </div>
+        </div>
+
+        <div class="tracker" id="trackDemo">
+          <div class="tracker__head">
+            <p class="tracker__route"><b>Recorrido de ejemplo:</b> La Plata → Puerto de Buenos Aires · <span id="trkCode">DEMO-001</span></p>
+            <span class="status" id="trkStatus">En tránsito</span>
+          </div>
+
+          <div class="tracker__grid">
+            <div class="tracker__map">
+              <div id="trackMap" class="track-map" role="region" aria-label="Mapa de demostración con el recorrido La Plata – Puerto de Buenos Aires"></div>
+              <button type="button" class="map-btn" id="followBtn" aria-pressed="false">Seguir unidad</button>
+              <p class="map-fallback" id="mapFallback" hidden>No se pudo cargar el mapa. Los datos de la demo siguen actualizándose.</p>
+            </div>
+
+            <div class="tracker__side">
+              <div class="tracker__progress">
+                <div class="tracker__barline"><span id="trkBar"></span></div>
+                <div class="tracker__ends"><span>Retiro <b id="trkStart">--:--</b></span><span id="trkPct">--</span></div>
+              </div>
+
+              <dl class="metrics">
+                <div><dt>Llegada estimada</dt><dd id="trkEta">--:--</dd></div>
+                <div><dt>Distancia restante</dt><dd id="trkKm">-- km</dd></div>
+                <div><dt>Velocidad</dt><dd id="trkSpeed">-- km/h</dd></div>
+                <div><dt>Última señal</dt><dd id="trkPing">--</dd></div>
+              </dl>
+
+              <ol class="timeline">
+                <li class="is-done"><span class="timeline__time" id="tlConfirm">--:--</span><span>Orden confirmada</span></li>
+                <li class="is-done"><span class="timeline__time" id="tlPickup">--:--</span><span>Carga retirada · La Plata</span></li>
+                <li class="is-current" id="tlTransit"><span class="timeline__time">Ahora</span><span>En tránsito · <span id="tlTransitText">Autopista Buenos Aires – La Plata</span></span></li>
+                <li id="tlDelivery"><span class="timeline__time" id="tlEta">--:--</span><span>Entrega · Puerto de Buenos Aires</span></li>
+              </ol>
+
+              <form class="track-form" id="trackForm" novalidate>
+                <label for="trackCode">Probar con otro código de ejemplo</label>
+                <div class="track-form__row">
+                  <input id="trackCode" name="codigo" type="text" placeholder="Ej: DEMO-002" autocomplete="off" spellcheck="false">
+                  <button type="submit" class="btn btn--dark btn--sm">Simular</button>
+                </div>
+                <p class="track-form__status" id="trackStatus" role="status"></p>
+              </form>
+
+              <div class="share">
+                <span class="share__url" id="trkUrl">ejemplo.com.ar/seguimiento/DEMO-001</span>
+                <button type="button" class="btn btn--primary btn--sm" id="copyLink"><span id="copyLinkText">Copiar link de ejemplo</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Desde La Plata ===== -->
+    <section class="section about" id="nosotros">
+      <div class="container about__inner">
+        <div class="about__text">
+          <h2 class="section-title">Desde La Plata</h2>
+          <p>La Plata Logística brinda transporte, movimiento de cargas y soluciones operativas para empresas, industrias y particulares.</p>
+          <p>Trabajamos con flota, maquinaria y recursos logísticos propios, y analizamos cada solicitud según el tipo de carga y las necesidades de la operación.</p>
+        </div>
+        <figure class="about__media">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/La-plata-view-south-cathedral.jpg" alt="Vista panorámica de la ciudad de La Plata desde la Catedral" width="1024" height="768" loading="lazy">
+          <figcaption><span>Buenos Aires · Argentina</span><strong>Nuestro punto de partida.</strong></figcaption>
+        </figure>
+        <ul class="facts">
+          <li>
+            <h3>Flota y equipamiento propios</h3>
+            <p>Camiones, autoelevadores, unidad plancha y equipamiento para contenedores.</p>
+          </li>
+          <li>
+            <h3>Transporte y maquinaria integrados</h3>
+            <p>Transporte, maquinaria y servicios especializados en una misma empresa, para simplificar la coordinación de cada operación.</p>
+          </li>
+          <li>
+            <h3>Base en La Plata</h3>
+            <p>Cerca de los corredores industriales, portuarios y logísticos de la región.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section contact" id="contacto">
+      <div class="container">
+        <div class="contact__card">
+          <div class="contact__intro">
+            <h2 class="section-title">Contanos qué necesitás mover.</h2>
+            <p>Mercadería, maquinaria, vehículos o contenedores: indicanos el tipo de carga, origen, destino y fechas, y preparamos una cotización.</p>
+
+            <a href="#" class="btn btn--whatsapp" id="whatsappBtn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+              Solicitar presupuesto por WhatsApp
+            </a>
+
+            <p class="contact__location">La Plata, Buenos Aires, Argentina.</p>
+          </div>
+
+          <form class="form" id="contactForm" novalidate>
+            <h3 class="form__title">Enviar una consulta</h3>
+            <div class="form__row">
+              <label class="field">
+                <span>Nombre y apellido</span>
+                <input type="text" name="nombre" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span>Empresa <em>(opcional)</em></span>
+                <input type="text" name="empresa" autocomplete="organization">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+              <label class="field">
+                <span>Teléfono</span>
+                <input type="tel" name="telefono" autocomplete="tel">
+              </label>
+            </div>
+            <label class="field">
+              <span>Servicio</span>
+              <select name="servicio" id="serviceSelect" required>
+                <option value="">Seleccioná un servicio</option>
+                <option>Transporte de cargas</option>
+                <option>Carga, descarga y autoelevadores</option>
+                <option>Movimiento de maquinaria y equipos</option>
+                <option>Traslado de vehículos</option>
+                <option>Contenedores marítimos</option>
+                <option>Otro</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Detalle de la operación</span>
+              <textarea name="mensaje" rows="4" placeholder="Tipo de carga, origen, destino, fechas…" required></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary btn--block">Enviar consulta</button>
+            <p class="form__status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="brand brand--light" aria-label="La Plata Logística — inicio">
+        <svg class="brand__mark"><use href="#lp-mark"/></svg>
+        <span class="brand__divider" aria-hidden="true"></span>
+        <span class="brand__text">
+          <span class="brand__name">LA PLATA</span>
+          <span class="brand__sub">LOGÍSTICA</span>
+        </span>
+      </a>
+      <ul class="footer__services">
+        <li>Transporte de cargas</li>
+        <li>Autoelevadores</li>
+        <li>Maquinaria</li>
+        <li>Vehículos</li>
+        <li>Contenedores</li>
+      </ul>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> La Plata Logística. Todos los derechos reservados.</p>
+      <p>La Plata, Buenos Aires, Argentina.</p>
+    </div>
+  </footer>
+
+  <script src="route-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
